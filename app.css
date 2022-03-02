@@ -113,6 +113,38 @@ img{
     display: flex;
 }
 
+
+
+/*messaggi ricevuti e inviati*/
 .chat{
-    flex-grow: 1;
+    height: 85%;
+    background-color: lightgray;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.sent{
+    background-color: lime;
+    border-radius: 4px;
+    padding: 7px 8px;
+    max-width: 400px;
+    align-self: flex-end;
+}
+
+.received{
+    background-color: white;
+    border-radius: 4px;
+    padding: 7px 8px;
+    max-width: 400px;
+    align-self: flex-start;
+}
+
+.chat span{
+    align-self: flex-end;
 }
