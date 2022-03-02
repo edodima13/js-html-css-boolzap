@@ -1,0 +1,66 @@
+*{
+    margin: 0 ;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+#root{
+    display: flex;
+    min-height: 100vh;
+}
+
+img{
+    max-width: 40px;
+}
+
+.contact{
+    min-width: 30vw;
+    background-color: red;
+}
+
+.chat-contact{
+    min-width: 70vw;
+    background-color: green;
+}
+
+/*il mio contatto*/
+.mycontact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}   
+
+.icons{
+    padding: 0 10px;
+}
+
+.my-image{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/*ricerca contatti*/
+.search-contact input{
+    padding: 3px 30px;
+    display: flex;
+    justify-self: center;
+    width: 95%;
+    margin: 10px 10px ;
+    border-radius: 10px;
+    border-color: transparent;
+    position: relative;
+}
+
+.search-contact i{
+    position: absolute;
+    transform: translateY(5px);
+    margin-left: 20px;
+    z-index: 1;
+}
+
+/*tutti i contatti*/
