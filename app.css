@@ -75,6 +75,10 @@ img{
     padding-bottom: 10px;
 }
 
+.active{
+    background-color: lightgray;
+}
+
 .new-contact{
     display: flex;
     align-items: center;
@@ -83,7 +87,7 @@ img{
 }
 
 .new-contact p{
-    color: #B5D8B9;
+    color: grey;
     font-size: 13px;
 }
 
@@ -136,6 +140,7 @@ img{
     padding: 7px 8px;
     max-width: 400px;
     align-self: flex-end;
+    margin-bottom: 4px;
 }
 
 .received{
@@ -144,6 +149,7 @@ img{
     padding: 7px 8px;
     max-width: 400px;
     align-self: flex-start;
+    margin-bottom: 4px;
 }
 
 .chat span{

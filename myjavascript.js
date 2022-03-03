@@ -1,6 +1,7 @@
 app = new Vue({
     el: "#root",
     data: {
+        activeContact: null,
         contacts: [
             {
             name: 'Michele',
@@ -86,7 +87,16 @@ app = new Vue({
             ],
             },
         ], 
-    }  
+    }, 
+    methods : {
+        selectContact : function(contact){
+            this.activeContact = contact
+            console.log(this.activeContact)
+        }
+    },
+    created(){
+        this.selectContact(this.contacts[0])
+    }
     })
 
 

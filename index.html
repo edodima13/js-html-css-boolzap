@@ -27,7 +27,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="cerca tra i contatti">
         </div>
-        <div v-for="element in contacts" class="contacts">
+        <div v-for="element in contacts" @click="selectContact(element)" class="contacts" :class="activeContact === element ? 'active' : '' ">
             <div class="new-contact">
                 <img :src="element.avatar" alt="">
             <div>
@@ -43,9 +43,9 @@
        
        <div class="chat-info">
         <div class="chat-contact">
-            <img src="img/avatar-02.png" alt="">
+            <img :src="activeContact.image" alt="">
             <div class="chat-info-data">
-                <h4>Michela</h4>
+                <h4>{{activeContact.name}}</h4>
                 <p>Ultimo accesso: 2/03/2022 15:59</p>
             </div>
             <div class="chat-info-icons">
@@ -55,13 +55,9 @@
             </div>
             
         </div>
-        <div class="chat">
-            <div class="sent">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, veritatis.</p>
-                <span>12.15</span>
-            </div>
-            <div class="received">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, cumque.</p>
+        <div  class="chat">
+            <div v-for="contatto in activeContact.messages" :class="contatto.status">
+                {{contatto.text}}
                 <span>12.15</span>
             </div>
         </div>
