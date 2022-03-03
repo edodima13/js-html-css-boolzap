@@ -154,6 +154,7 @@ img{
 
 .chat span{
     align-self: flex-end;
+    font-size: 11px;
 }
 
 /*invio del messaggio*/

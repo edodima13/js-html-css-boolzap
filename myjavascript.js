@@ -1,6 +1,7 @@
 app = new Vue({
     el: "#root",
     data: {
+        newMessage : "",
         activeContact: null,
         contacts: [
             {
@@ -92,6 +93,19 @@ app = new Vue({
         selectContact : function(contact){
             this.activeContact = contact
             console.log(this.activeContact)
+        }, 
+        invia : function(){
+            const message = {
+                date : "",
+                text : this.newMessage,
+                status : "sent"
+            },
+            this.activeContact.messages.push( message )
+            this.newMessage="";
+            setTimeout(this.reply,1000)
+        },
+        reply : function(){
+
         }
     },
     created(){
