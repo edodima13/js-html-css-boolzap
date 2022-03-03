@@ -96,15 +96,21 @@ app = new Vue({
         }, 
         invia : function(){
             const message = {
-                date : "",
+                date : "10/01/2020 15:30:55",
                 text : this.newMessage,
                 status : "sent"
-            },
+            }
             this.activeContact.messages.push( message )
             this.newMessage="";
             setTimeout(this.reply,1000)
         },
         reply : function(){
+            const message = {
+                date : "10/01/2020 15:30:55",
+                text : "ok",
+                status : "received"
+            }
+            this.activeContact.messages.push( message )
 
         }
     },
