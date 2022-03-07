@@ -25,7 +25,7 @@
         </div>
         <div class="search-contact">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" v-model="searc" placeholder="cerca tra i contatti">
+            <input type="text" v-model="search" @keyup="filter" placeholder="cerca tra i contatti">
         </div>
         <div v-for="element in contacts" @click="selectContact(element)" class="contacts" :class="activeContact === element ? 'active' : '' ">
             <div class="new-contact">

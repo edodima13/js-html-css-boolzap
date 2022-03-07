@@ -112,7 +112,11 @@ app = new Vue({
                 status : "received"
             }
             this.activeContact.messages.push( message )
-
+        },
+        filter : function(){
+            this.contacts.forEach(element => {
+                console.log( this.search )
+            });
         }
     },
     created(){
