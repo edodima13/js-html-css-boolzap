@@ -115,7 +115,12 @@ app = new Vue({
         },
         filter : function(){
             this.contacts.forEach(element => {
-                console.log( this.search )
+                //console.log( this.search )
+                if ( element.name.toLowerCase().includes(this.search.toLowerCase())){
+                    element.visible = true
+                } else {
+                    element.visible = false
+                }
             });
         }
     },
