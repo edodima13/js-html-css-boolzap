@@ -2,6 +2,7 @@ app = new Vue({
     el: "#root",
     data: {
         newMessage : "",
+        search:"",
         activeContact: null,
         contacts: [
             {
